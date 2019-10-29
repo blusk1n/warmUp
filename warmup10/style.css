@@ -1,0 +1,28 @@
+body{
+	background-color: #eee;
+
+
+}
+
+input{
+	width: 350px;
+	height: 40px;
+	
+}
+button{
+	width: 350px;
+	height: 30px;
+}
+
+.class1{
+	background-color: blue;
+	font-family: monospace;
+	font-size: 35px;
+	color :white;
+}
+.class2{
+	background-color: purple;
+	font-family: sans-serif;
+	font-size: 35px;
+	color: white;
+}
