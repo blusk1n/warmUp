@@ -1,4 +1,5 @@
 $(function(){
+	var input=$("#input")
 	$("#left").click(function(){
 		$("div #left").addClass('clicked1')
 		$('#right').removeClass("clicked2")
@@ -11,11 +12,11 @@ $(function(){
 	})
 	$("#creat").click(function(){
 		if($('#right').hasClass('clicked2')){
-			$('#righted').append("<li>hello from right</li>")
+			$('#righted').append("<li>"+input.val()+ "</li>")
 
 		}
 		if($('#left').hasClass('clicked1')){
-			$('#lefted').append("<li>hello from left </li>")
+			$('#lefted').append("<li>"+input.val()+ "</li>")
 		}
 
 

@@ -12,15 +12,28 @@ button{
 	margin: 30px;
 
 }
+input{
+	width: 400px;
+	height: 40px;
+	background:transparent;
+	font-size: 30px;
+	border: 1px solid purple;
+	font-family: monospace;
+	color: white;
+}
+ul{
+	margin-left:50px; 
+}
 ul li {
 	font-size: 23px;
+
 }
 button{
 	border: none;
 	border-left: 1px solid purple;
 	border-bottom: 1px solid purple;
 	background: none;
-	color:white;
+	color:black;
 	font-size: 25px ;
 	position: relative;
 
@@ -50,6 +63,7 @@ button:hover::after{
 	z-index: -1;
 	transition: 0.7s
 
+
 }
 button::before{
 	content: "";
@@ -58,7 +72,7 @@ button::before{
 	right: 0;
 	left: 100%;
 	bottom: 100%;
-	transition: 0.7s
+	transition: 0.3s
 	background-color: purple;
 	z-index: -1;
 
@@ -73,10 +87,14 @@ button:hover::before{
 	bottom: 0px;
 	background-color: purple;
 	z-index: -1;
-	transition: 0.7s
+	transition: 0.3s;
+	filter: blur(10px);
 
 }
 button:hover{
 	transform: scale(1.4);
-	transition: 0.4s
+	transition: 0.4s;
+	color:white;
+
+
 }
