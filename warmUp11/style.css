@@ -1,5 +1,5 @@
 body{
-	background-color: pink;
+	background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
 	font-family: monospace;
 }
 .lists{
@@ -9,19 +9,74 @@ body{
 button{
 	width: 200px;
 	height: 40px;
-	margin: 10px;
+	margin: 30px;
+
 }
 ul li {
 	font-size: 23px;
 }
 button{
 	border: none;
-	border-right: 1px solid black;
-	border-left: 1px solid black;
-	border-bottom: 1px solid black;
+	border-left: 1px solid purple;
+	border-bottom: 1px solid purple;
 	background: none;
 	color:white;
-	font-size: 15px ;
+	font-size: 25px ;
+	position: relative;
 
 
+}
+button::after{
+	content: "";
+	position: absolute;
+	top: 100%;
+	right: 100%;
+	left: 0px;
+	bottom: 0px;
+	transition: 0.7s
+	background-color: purple;
+	z-index: -1;
+
+
+}
+button:hover::after{
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	background-color: purple;
+	z-index: -1;
+	transition: 0.7s
+
+}
+button::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 100%;
+	bottom: 100%;
+	transition: 0.7s
+	background-color: purple;
+	z-index: -1;
+
+
+}
+button:hover::before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	background-color: purple;
+	z-index: -1;
+	transition: 0.7s
+
+}
+button:hover{
+	transform: scale(1.4);
+	transition: 0.4s
 }
