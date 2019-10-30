@@ -1,0 +1,27 @@
+body{
+	background-color: pink;
+	font-family: monospace;
+}
+.lists{
+	display:flex;
+	justify-content: center
+}
+button{
+	width: 200px;
+	height: 40px;
+	margin: 10px;
+}
+ul li {
+	font-size: 23px;
+}
+button{
+	border: none;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	background: none;
+	color:white;
+	font-size: 15px ;
+
+
+}
