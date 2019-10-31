@@ -22,3 +22,46 @@ Technical Details
     -The maximum size of a range will be 100 integers
     -The starting number of a range will be: 0 < n < 100
  */
+ function smallestLargestInteger(str,n){
+    var arr = str.split("");
+    var newArr = [];
+    for(var i = 0 ; i < arr.length ; i+=2){
+      if(arr.length % 2 === 0){
+        if(arr[i] + arr[i+1] < 20 ){
+            newArr.push(arr[i] + arr[i+1])
+        }//condition if
+        else if(arr[i] + arr[i+1] > 20){
+          newArr.push(arr[i])
+          newArr.push(arr[i+1])
+        } 
+      }//even if 
+  ////////////////////////////////////////////////       
+      if(arr.length % 2 === 1){
+        if(arr[i] + arr[i+1] < 20 ){
+            newArr.push(arr[i] + arr[i+1])
+        }//condition
+        else if(arr[i] + arr[i+1] > 20){
+          newArr.push(arr[i])
+          newArr.push(arr[i+1])
+          newArr.push(arr[i+2])
+        }  
+      }//odd condition 
+
+    }//for  
+    newArr.length=n
+    console.log(newArr)
+    var minMax = [];
+    var min =parseInt(newArr[0]);
+    var max=parseInt(newArr[0]);
+    for(var j = 0 ; j < newArr.length ; j++){
+      if(parseInt(newArr[j]) < min){
+        min = parseInt(newArr[j]);
+      }
+      if( max < parseInt(newArr[j])){
+        max = parseInt(newArr[j])
+      }
+    }
+    minMax.push(min);
+    minMax.push(max);
+    return minMax
+ }//function
