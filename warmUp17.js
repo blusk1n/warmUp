@@ -30,3 +30,18 @@
 // var calculateTime = function(keyboard, word) {
     
 // };
+function calculateTime(keyboard,word){
+	var count = 0 ;
+	var indexArr=[];
+	var keyArr = keyboard.split("");
+	for(var i = 0; i < word.length ; i++){
+		for(var j=0 ; j < keyArr.length ; j++ ){
+			if(word[i]===keyArr[j]){
+				indexArr.push(j)
+			}
+		}
+		console.log(indexArr[i])
+		count+= Math.abs(indexArr[i]-indexArr[i+1])
+	}
+	return count
+}
